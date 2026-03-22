@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agentic House Simulator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div id="scene-wrap">
+        <canvas id="sim-canvas"></canvas>
+        <div id="hud">
+          <strong>Agentic House Simulator</strong>
+          <span id="sim-clock">Day 1 • 08:00</span>
+        </div>
+      </div>
+
+      <aside id="control-panel">
+        <h1>Control Room</h1>
+        <p>
+          Summon events, inject new characters, or influence moods. Agents keep moving and making decisions based on
+          personality + random pressure.
+        </p>
+
+        <section class="panel-section">
+          <h2>Quick Actions</h2>
+          <div id="quick-actions"></div>
+        </section>
+
+        <section class="panel-section">
+          <h2>Command Chat</h2>
+          <div id="chat-log" aria-live="polite"></div>
+          <form id="chat-form">
+            <input id="chat-input" autocomplete="off" placeholder="Try: event party, spawn male, mood conflict" />
+            <button type="submit">Send</button>
+          </form>
+        </section>
+
+        <section class="panel-section">
+          <h2>Cast Status</h2>
+          <div id="agent-list"></div>
+        </section>
+      </aside>
+    </div>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
